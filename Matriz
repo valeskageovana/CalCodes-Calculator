@@ -1,0 +1,512 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    int menu, proposicional, sair;
+    char opcao;
+
+
+    printf("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n");
+    printf("%%   CALCODES CALCULATOR    %%\n");
+    printf("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n");
+
+    do{        // PERMANECER NO MENU
+
+
+    printf("   | MENU | \n\n");
+
+    printf("1 - SOMATORIO \n");
+    printf("2 - LOGICA PROPOSICIONAL \n");
+    printf("3 - MATRIZES \n");
+    printf("4 - ANALISE COMBINATORIA \n");
+    printf("5 - SAIR \n\n");
+
+    printf("DIGITE A OPCAO DESEJADA: ");
+    scanf("%d", &menu);
+    system("cls||clear"); // Limpar
+
+
+    switch(menu){
+
+    int somatoria, menusomatoria;
+    case 1:
+            system("cls||clear");
+
+            printf("1 - Somatório de j = m até n para a regra j\n\n");
+            printf("2 - Somatório de j = m até n para a regra (−j)^(j + 1)\n\n");
+            printf("3 - Voltar ao Menu anterior\n\n");
+
+    printf("DIGITE A OPCAO DESEJADA: ");
+    scanf("%d,", &menusomatoria);
+    printf("\n");
+
+        system("cls||clear");
+
+        switch(menusomatoria){
+        int m, n, j, soma;
+        case 1:
+        printf(" - DIGITE UM VALOR PARA M: ");
+        scanf("%d", &m);
+        printf(" - DIGITE UM VALOR PARA N: ");
+        scanf("%d", &n);
+
+        for(j=1, soma=0; j <= n; j++){  // Somatório de j = m até n para a regra
+            soma = soma + j;
+        }
+
+        printf("\n");
+        printf("   RESULTADO = %d \n\n", soma);
+        printf("   DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("   RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 03"); // Pausa de 3 segundos
+        system("cls||clear"); // Limpar
+
+        break;
+
+        case 2:
+        printf(" - DIGITE UM VALOR PARA M: ");
+        scanf("%d", &m);
+        printf(" - DIGITE UM VALOR PARA N: ");
+        scanf("%d", &n);
+        int aux;
+
+        for(j=1, soma=0; j <= n; j++){  // Somatório de j = m até n para a regra (−j)^(j + 1)
+            soma = pow(j, j+1);         // Falta Finalizar....
+            aux = soma + 1;
+        }
+
+        printf("\n");
+        printf("   RESULTADO = %d \n\n", soma);
+        printf("   DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("   RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 03"); // Pausa de 3 segundos
+        system("cls||clear"); // Limpar
+        break;
+
+        case 3:
+        printf(" ");
+        }
+    break;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    case 2:
+    system("cls||clear"); // Limpar
+    printf("1 - ~p \n\n");                                 // LÓGICA PROPOSICIONAL
+    printf("2 - ~q \n\n");
+    printf("3 - p∧q \n\n");
+    printf("4 - p∨q \n\n");
+    printf("5 - p ⊻ q \n\n");
+    printf("6 - p → q \n\n");
+    printf("7 - p ↔ q \n\n");
+    printf("8 - Voltar ao Menu anterior\n\n");
+
+    printf("DIGITE A OPCAO DESEJADA: ");
+    scanf("%d", &proposicional);
+    system("cls||clear"); // Limpar
+
+    switch(proposicional){
+    int p, q;
+    case 1:
+        printf("| p | ~p |\n");
+        printf("| V |  F |\n");
+        printf("| F |  V |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+
+    break;
+
+    case 2:
+        printf("| q | ~q |\n");
+        printf("| V |  F |\n");
+        printf("| F |  V |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 3:
+        printf("| p | q | p∧q  |\n");
+        printf("| V | V |  V   |\n");
+        printf("| V | F |  F   |\n");
+        printf("| F | V |  F   |\n");
+        printf("| F | F |  F   |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 4:
+        printf("| p | q | p∨q  |\n");
+        printf("| V | V |  V   |\n");
+        printf("| V | F |  V   |\n");
+        printf("| F | V |  V   |\n");
+        printf("| F | F |  F   |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 5:
+        printf("| p | q | p⊻q  |\n");
+        printf("| V | V |  F   |\n");
+        printf("| V | F |  V   |\n");
+        printf("| F | V |  V   |\n");
+        printf("| F | F |  F   |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 6:
+        printf("| p | q | p→q |\n");
+        printf("| V | V |  V  |\n");
+        printf("| V | F |  F  |\n");
+        printf("| F | V |  V  |\n");
+        printf("| F | F |  V  |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 7:
+        printf("| p | q | p↔q |\n");
+        printf("| V | V |  V  |\n");
+        printf("| V | F |  F  |\n");
+        printf("| F | V |  F  |\n");
+        printf("| F | F |  V  |\n");
+        printf("\n");
+        printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+        scanf("%d", &sair);
+        printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+        system("sleep 04"); // Pausa de 4 segundos
+        system("cls||clear"); // Limpar
+    break;
+
+    case 8:
+        printf(" ");
+    }
+
+    break;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+   
+    
+    case 3:                                                   // MATRIZES
+    printf("1 - Determinante\n\n");
+    printf("2 - Soma\n\n");
+    printf("3 - Subtração\n\n");
+    printf("4 - Produto\n\n");
+    printf("5 - Voltar ao Menu Anterior \n\n");
+
+    printf("DIGITE A OPCAO DESEJADA: ");
+    scanf("%d", &menu);
+    system("cls||clear");
+
+    switch(menu){   
+        int determinate,menudeterminante,produto; 
+    case 1:
+
+        system("cls||clear");
+
+    printf("1 - Determinante da matriz A 2x2 é ((a11 * a22)-(a12*a22))\n");
+    printf("2 - Determinante da matriz B 2x2 é ((b11 * b22)-(b12*b22))\n");
+    printf("3 - Voltar ao Menu anterior \n\n");
+
+printf("DIGITE A OPCAO DESEJADA: ");
+scanf("%d",&menudeterminante);
+printf("\n");
+
+    system("cls||clear");
+
+switch(menudeterminante){
+     int a11,a12,a21,a22,b11,b12,b21,b22,determinanteA,determinanteB;
+     case 1:
+     printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&a11);
+printf("\nEntre com o valor A12 da matriz A : \n");
+scanf("%d",&a12);
+printf("\nEntre com o valor A21 da matriz A : \n");
+scanf("%d",&a21);
+printf("\nEntre com o valor A22 da matriz A : \n");
+scanf("%d",&a22);
+
+    ///////////////////               CALCULANDO DETERMINANTE DE A            /////////////////////////////
+
+determinanteA = ((a11*a22)-(a12*a22)); 
+printf("A determinante da matriz A e :%d\n ",determinanteA);
+printf(" DIGITE PARA RERTONAR PARA O MENU PRINCIPAL.........\n\n");
+scanf("%d", &sair);
+printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+system("sleep 03"); // Pausa de 3 segundos
+system("cls||clear"); // Limpar
+
+break;
+
+case 2:
+printf("\nEntre com o valor B11 da matriz B : \n");
+scanf("%d",&b11);
+printf("\nEntre com o valor B12 da matriz B : \n");
+scanf("%d",&b12);
+printf("\nEntre com o valor B21 da matriz B : \n");
+scanf("%d",&b21);
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&b22);
+
+        ////////////////////           CALCULANDO DETERMINANTE B      //////////////
+
+determinanteB= ((b11*b22)-(b12*b22)); 
+
+printf("A determinante da matriz B e :%d\n ",determinanteB);
+printf(" DIGITE PARA RERTONAR PARA O MENU PRINCIPAL.........\n\n");
+scanf("%d", &sair);
+printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+system("sleep 03"); // Pausa de 3 segundos
+system("cls||clear"); // Limpar
+
+break;
+
+case 3:
+printf(" ");
+
+}
+    }
+
+
+
+  system("cls||clear");   
+
+switch(menu){
+    int soma1,soma2,soma3,soma4,a11,a12,a21,a22,b11,b12,b21,b22;
+    int subtracao1,subtracao2,subtracao3,subtracao4;
+case 2:
+   printf("A soma das matrizes A e B 2x2 e dada pela seguinte formula:\n\n ");
+printf(" a11 + b11   a12 + b12\n  a21 + b21   a22 + b22 \n\n");
+
+  
+   printf("ENTRE COM O VALORES A E B: ");
+
+    
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&a11);
+printf("\nEntre com o valor B11 da matriz B : \n");
+scanf("%d",&b11);
+
+printf("\nEntre com o valor A12 da matriz A : \n");
+scanf("%d",&a12);
+printf("\nEntre com o valor B12 da matriz B : \n");
+scanf("%d",&b12);
+
+printf("\nEntre com o valor A21 da matriz A : \n");
+scanf("%d",&a21);
+printf("\nEntre com o valor B21 da matriz B : \n");
+scanf("%d",&b21);
+
+printf("\nEntre com o valor A22 da matriz A : \n");
+scanf("%d",&a22);
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&b22);
+
+soma1 = a11 + b11;
+soma2 = a21 + b21;
+soma3 = a12 +b12;
+soma4 = a22 + b22;
+
+printf("A soma das matrizes A e B e:\n %d   %d\n %d   %d ",soma1,soma2,soma3,soma4);
+
+printf("\n\nDIGITE PARA RERTONAR PARA O MENU PRINCIPAL.........\n\n");
+scanf("%d", &sair);
+printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+system("sleep 03"); // Pausa de 3 segundos
+system("cls||clear"); // Limpar
+
+
+    break;
+
+case 3:
+printf("A subtracao das matrizes A e B 2x2 e dada pela seguinte formula:\n\n ");
+printf(" a11 - b11   a12 - b12\n  a21 - b21   a22 - b22 \n\n");
+
+     printf("ENTRE COM O VALORES A E B:\n\n");
+
+
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&a11);
+printf("\nEntre com o valor B11 da matriz B : \n");
+scanf("%d",&b11);
+
+printf("\nEntre com o valor A12 da matriz A : \n");
+scanf("%d",&a12);
+printf("\nEntre com o valor B12 da matriz B : \n");
+scanf("%d",&b12);
+
+printf("\nEntre com o valor A21 da matriz A : \n");
+scanf("%d",&a21);
+printf("\nEntre com o valor B21 da matriz B : \n");
+scanf("%d",&b21);
+
+printf("\nEntre com o valor A22 da matriz A : \n");
+scanf("%d",&a22);
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&b22);
+
+subtracao1 = a11 - b11;
+subtracao2 = a21 - b21;
+subtracao3 = a12 - b12;
+subtracao4 = a22 - b22;
+
+printf("A subtracao das matrizes A e B e:\n %d     %d\n %d     %d ",subtracao1,subtracao2,subtracao3,subtracao4);
+
+printf("\n\nDIGITE PARA RERTONAR PARA O MENU PRINCIPAL.........\n\n");
+scanf("%d", &sair);
+printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+system("sleep 03"); // Pausa de 3 segundos
+system("cls||clear"); // Limpar
+
+    break;
+
+
+    int multiplicacao1,multiplicacao2,multiplicacao3,multiplicacao4;
+case 4:
+
+    printf("O produto de uma matriz A e B 2x2 e dada pela seguinte formula linha A * coluna B:\n ");
+    printf("a11 * b11  a12 * b21\n a21 * b12  a22 * b22");
+
+printf("\nENTRE COM O VALORES A E B:\n\n");
+
+
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&a11);
+printf("\nEntre com o valor B11 da matriz B : \n");
+scanf("%d",&b11);
+
+printf("\nEntre com o valor A12 da matriz A : \n");
+scanf("%d",&a12);
+printf("\nEntre com o valor B12 da matriz B : \n");
+scanf("%d",&b21);
+
+printf("\nEntre com o valor A21 da matriz A : \n");
+scanf("%d",&a21);
+printf("\nEntre com o valor B21 da matriz B : \n");
+scanf("%d",&b12);
+
+printf("\nEntre com o valor A22 da matriz A : \n");
+scanf("%d",&a22);
+printf("\nEntre com o valor A11 da matriz A : \n");
+scanf("%d",&b22);
+
+multiplicacao1 = a11 * b11;
+multiplicacao2 = a12 * b21;
+multiplicacao3 = a21 * b12;
+multiplicacao4 = a22 * b22;
+
+printf("A multiplicação das matrizes A e B e:\n%d     %d\n%d     %d",multiplicacao1,multiplicacao2,multiplicacao3,multiplicacao4);
+
+    break;
+
+    printf(" Voltando ao menu principal ");
+    system("cls||clear");
+
+}
+
+    break;
+
+
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    int analise;
+    case 4:                                                   // ANÁLISE COMBINATÓRIA
+    printf("1 - Permutação Simples \n\n");
+    printf("2 - Arranjo Simples \n\n");
+    printf("3 - Combinação Simples \n\n");
+    printf("4 - Voltar ao Menu Anterior \n\n");
+
+    printf("DIGITE A OPCAO DESEJADA: ");
+    scanf("%d", &analise);
+    system("cls||clear");
+    switch(analise){
+
+    case 1:
+    printf("Permutação Simples \n\n");
+    printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+    scanf("%d", &sair);
+    printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+    system("sleep 03"); // Pausa de 3 segundos
+    system("cls||clear"); // Limpar
+    break;
+
+    case 2:
+    printf("Arranjo Simples \n\n");
+    printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+    scanf("%d", &sair);
+    printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+    system("sleep 03"); // Pausa de 3 segundos
+    system("cls||clear"); // Limpar
+    break;
+
+    case 3:
+    printf("Combinação Simples \n\n");
+    printf("DIGITE PARA RETORNAR AO MENU PRINCIPAL: ");
+    scanf("%d", &sair);
+    printf("RETORNANDO AO MENU PRINCIAL........ \n\n");
+    system("sleep 03"); // Pausa de 3 segundos
+    system("cls||clear"); // Limpar
+    break;
+
+    case 4:
+    printf(" ");
+    system("cls||clear");
+    break;
+
+
+    }
+    break;
+
+
+    case 5:
+    printf("ENCERRANDO...\n");                   // SAIR
+    system("sleep 03"); // Pausa de 3 segundos
+    system("cls||clear"); // Limpar
+    exit(1); // SAINDO SOMENTE NA OPÇÃO 5
+
+
+    default:
+    printf("** DIGITE UMA OPCAO VALIDA **\n");                  // OPÇÃO INVALIDA
+    system("sleep 03"); // Pausa de 3 segundos
+    system("cls||clear"); // Limpar
+
+    }
+    }while(1);  // PERMANECER NO MENU
+
+
+    printf("\n\n\n\n\n\n\n\n\n\n");
+    return 0;
+}
